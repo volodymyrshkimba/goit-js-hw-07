@@ -4,10 +4,17 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const body = document.children[0].lastElementChild;
+const body = document.querySelector('body');
+const changeBtn = document.querySelector('.change-color');
+const spanColorName = document.querySelector('.color');
 
-body.style.backgroundColor = 'teal';
 
-console.log(body);
+const addBodyStyleAndSpanText = () => {
+	body.style.backgroundColor = getRandomHexColor();
+	spanColorName.textContent = body.style.backgroundColor;
+}
+
+changeBtn.addEventListener('click', addBodyStyleAndSpanText)
+
 
 
