@@ -9,12 +9,12 @@ const changeBtn = document.querySelector('.change-color');
 const spanColorName = document.querySelector('.color');
 
 
-const addBodyStyleAndSpanText = () => {
+const onChangebtnClick = () => {
 	body.style.backgroundColor = getRandomHexColor();
 	spanColorName.textContent = body.style.backgroundColor;
 }
 
-changeBtn.addEventListener('click', addBodyStyleAndSpanText)
+changeBtn.addEventListener('click', onChangebtnClick)
 
 
 

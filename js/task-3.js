@@ -1,7 +1,7 @@
-const input = document.querySelector('#name-input');
+const inputEl = document.querySelector('#name-input');
 const span = document.querySelector('#name-output');
 
-const getSetInputText = (event) => {
+const onInputElInput = (event) => {
 
 	span.textContent = event.currentTarget.value.trim();
 
@@ -11,7 +11,7 @@ const getSetInputText = (event) => {
 
 }
 
-input.addEventListener('input', getSetInputText);
+inputEl.addEventListener('input', onInputElInput);
 
 
 

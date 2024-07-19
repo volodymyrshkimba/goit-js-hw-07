@@ -27,16 +27,16 @@ const destroyBoxes = () => {
     boxesPlace.innerHTML = '';
 }
 
-const drawBoxes = () => {
+const onCreatebtnClick = () => {
 	if (input.value <= 100 && input.value >= 1) {
 		createBoxes(input.value);
 	} 
 	input.value = '';
 }
 
-const clearBoxes = () => {
+const onDestroybtnClick = () => {
 	destroyBoxes();
 }
 
-createBtn.addEventListener('click', drawBoxes);
-destroyBtn.addEventListener('click', clearBoxes);
+createBtn.addEventListener('click', onCreatebtnClick);
+destroyBtn.addEventListener('click', onDestroybtnClick);
