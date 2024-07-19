@@ -41,6 +41,7 @@ input {
 }
 
 button {
+  display: block;
   cursor: pointer;
   color: inherit;
   border: none;
@@ -111,9 +112,7 @@ button {
 }
 
 #name-input::placeholder {
-  font-weight: 400;
   font-size: 16px;
-  line-height: 150%;
   color: #2e2f42;
   letter-spacing: 0.04em;
 }
@@ -133,17 +132,21 @@ h1 {
 }
 
 .login-form label {
+  display: flex;
+  flex-direction: column;
   letter-spacing: 0.04em;
+  row-gap: 8px;
+}
+
+.login-form label:not(:last-of-type) {
+  margin-bottom: 8px;
 }
 
 .login-form input {
-  display: block;
-  width: 100%;
   height: 40px;
   border: 1px solid #808080;
   border-radius: 4px;
   padding-left: 16px;
-  margin-top: 8px;
 }
 
 .login-form button {
@@ -154,4 +157,63 @@ h1 {
   color: #fff;
   margin-top: 16px;
   letter-spacing: 0.04em;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+/* TASK 5 */
+
+.widget {
+  border-radius: 8px;
+  padding: 100px 88px;
+  max-width: 345px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.widget p {
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+
+.change-color {
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: #4e75ff;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+/* TASK 6 */
+
+#controls {
+  border-radius: 8px;
+  padding: 32px;
+  background-color: #f6f6fe;
+  max-width: 486px;
+  display: flex;
+  column-gap: 16px;
+}
+
+#controls input {
+  border: 1px solid #808080;
+  border-radius: 8px;
+  width: 150px;
+  height: 40px;
+}
+
+#controls button {
+  border-radius: 8px;
+  width: 120px;
+  height: 40px;
+  background-color: #4e75ff;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+#controls button:last-of-type {
+  background-color: #ff4e4e;
 }
